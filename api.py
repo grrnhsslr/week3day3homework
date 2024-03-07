@@ -11,9 +11,6 @@ class PokemonStats:
 class PokemonAPI:
     base_url = "https://pokeapi.co/api/v2/pokemon/"
 
-    def __init__(self):
-        pass
-
     def get_pokemon(self, name):
         poke_stat = requests.get(self.base_url + name)
         if poke_stat:

@@ -3,12 +3,9 @@
 
 from api import PokemonAPI
 
-pokemon = PokemonAPI()
-charizard_stats = pokemon.get_pokemon('charizard')
-bulb_stats = pokemon.get_pokemon('bulbasaur')
-print(charizard_stats.name)
-print(charizard_stats.weight)
-print(charizard_stats.height)
-print(bulb_stats.name)
-print(bulb_stats.weight)
-print(bulb_stats.height)
+
+poke_search = PokemonAPI()
+poke_found = poke_search.get_pokemon(input("Enter pokemon name: "))
+if poke_found:
+    print(f'{poke_found.name} is {poke_found.height} units tall, and weighs {poke_found.weight}')
+
